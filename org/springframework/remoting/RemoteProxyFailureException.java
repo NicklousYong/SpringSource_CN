@@ -1,0 +1,48 @@
+/***** Lobxxx Translate Finished ******/
+/*
+ * Copyright 2002-2012 the original author or authors.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package org.springframework.remoting;
+
+/**
+ * RemoteAccessException subclass to be thrown in case of a failure
+ * within the client-side proxy for a remote service, for example
+ * when a method was not found on the underlying RMI stub.
+ *
+ * <p>
+ * 
+ * 
+ * @author Juergen Hoeller
+ * @since 1.2.8
+ * @see RemoteInvocationFailureException
+ */
+@SuppressWarnings("serial")
+public class RemoteProxyFailureException extends RemoteAccessException {
+
+	/**
+	 * Constructor for RemoteProxyFailureException.
+	 * <p>
+	 *  RemoteAccessException子类在远程服务的客户端代理中发生故障时抛出,例如在底层RMI存根上找不到方法时
+	 * 
+	 * 
+	 * @param msg the detail message
+	 * @param cause the root cause from the remoting API in use
+	 */
+	public RemoteProxyFailureException(String msg, Throwable cause) {
+		super(msg, cause);
+	}
+
+}
